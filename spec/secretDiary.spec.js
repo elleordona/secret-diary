@@ -32,21 +32,21 @@ describe('getting entries from diary', () => {
     // test the getEntries when diary is unlocked
     it('should show the entries in the diary', () => {
         // arrange
-
+        const myDiary = new secretDiary(new unlock());
         // act
-
+        const result = myDiary.getEntries();
         // assert
-
+        expect(result).toBe('');
     });
 
     // test the getEntries when diary is locked
     it('should show This diary is locked', () => {
         // arrange
-
+        const myDiary = new secretDiary(new lock());
         // act
-
+        const result = myDiary.getEntries();
         // assert
-
+        expect(result).toBe('This diary is locked');
     });
     
 });
