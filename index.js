@@ -1,6 +1,6 @@
-const secretDiary = require("./src/SecretDiary");
-const unlock = require("./src/Unlock");
-const lock = require("./src/Lock");
+import secretDiary from "./src/SecretDiary.js";
+import unlock from "./src/Unlock.js";
+import lock from "./src/Lock.js";
 
 let entry1 = new secretDiary(new unlock()); // create new entry
 console.log(entry1.addEntry('hello')); // add string to entry

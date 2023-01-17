@@ -15,4 +15,4 @@ class unlock {
     }
 }
 
-module.exports = unlock;
+export default unlock;

@@ -9,4 +9,4 @@ class lock {
     }
 }
 
-module.exports = lock;
+export default lock;

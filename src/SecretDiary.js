@@ -18,4 +18,4 @@ class secretDiary {
 
 }
 
-module.exports = secretDiary;
+export default secretDiary;
