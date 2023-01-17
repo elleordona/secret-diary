@@ -8,7 +8,8 @@
     "test": "tests"
   },
   "scripts": {
-    "scripts": { "test": "jasmine" }
+    "test": "jasmine" ,
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
