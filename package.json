@@ -1,0 +1,23 @@
+{
+  "name": "secret-diary",
+  "version": "1.0.0",
+  "description": "secret diary exercise",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elleordona/secret-diary.git"
+  },
+  "author": "Elle" "Saida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elleordona/secret-diary/issues"
+  },
+  "homepage": "https://github.com/elleordona/secret-diary#readme"
+}
