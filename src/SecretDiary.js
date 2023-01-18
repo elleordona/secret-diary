@@ -7,8 +7,21 @@ export default class secretDiary {
         this.#typeOfLock = typeOfLock;
     };
 
-    isLocked = () => { return this.#typeOfLock.isLocked() }; 
+    isLocked = () => {
+        return this.#typeOfLock.isLocked()
+    }; 
+
+    getEntries = () => {
+        if (this.isLocked() === true) {
+            return `Error: Diary is Locked`;
+        };
+    };
     
+    addEntry = () => {
+        if (this.isLocked() === true) {
+            return `Error: Diary is Locked`;
+        };
+    };
 
     // // functions
     // addEntry(str) {

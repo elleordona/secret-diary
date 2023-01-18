@@ -34,8 +34,38 @@ describe('when we create a secretDiary', () => {
         testDiary.isLocked();
         // Assert
         expect(lockSpy).toHaveBeenCalled();
-    })
-})
+    });
+});
+
+describe('getEntries tests', () => {
+    
+    it('should give an error when diary is locked', () => {
+        // Arrange
+        const testLock = { isLocked: () => true };
+        const testDiary = new secretDiary(testLock);
+        // Act
+        const result = testDiary.getEntries();
+        // Assert
+        expect(result).toMatch(`Error: Diary is Locked`);
+    });
+    
+});
+
+describe('addEntry tests', () => {
+    
+    it('should give an error when diary is locked', () => {
+        // Arrange
+        const testLock = { isLocked: () => true };
+        const testDiary = new secretDiary(testLock);
+        // Act
+        const result = testDiary.addEntry();
+        // Assert
+        expect(result).toMatch(`Error: Diary is Locked`);
+    });
+    
+});
+
+
 
 
 //! ignore these test for now
