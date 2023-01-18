@@ -2,6 +2,7 @@ export default class secretDiary {
 
     // properties
     #typeOfLock;
+    #diaryEntries = [];
 
     constructor(typeOfLock) {
         this.#typeOfLock = typeOfLock;
@@ -14,6 +15,8 @@ export default class secretDiary {
     getEntries = () => {
         if (this.isLocked() === true) {
             return `Error: Diary is Locked`;
+        } else if (this.isLocked() === false) {
+            return this.#diaryEntries.length;
         };
     };
     

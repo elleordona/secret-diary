@@ -38,3 +38,29 @@ So that i can use it.
 **Test 7** - `unlock` changes the state of `locked` to false in the instance of `secretDiary` [done]
 
 ---
+
+## User Story 4
+
+```sh
+As a user,
+I want to be able to see all entries when the diary is unlocked,
+So that I can reminisce
+```
+
+**Test 8** - when a `secretDiary` is created the length of `diaryEntries` is 0 [done]
+
+**Test 9** - `getEntries` will give the length of the `diaryEntries` array [done]
+
+## User Story 5
+
+```sh
+As a user,
+I want to be able to add entries to the diary when unlocked,
+So that i can journal my life.
+```
+
+**Test 10** - when `addEntry` is called with an `entry`, while the `secretDiary` is `Unlocked`, the length of `entries` should increase by 1
+
+**Test 11** - make sure that the `entry` has been added to `entries` after `addEntry` has been called
+
+---

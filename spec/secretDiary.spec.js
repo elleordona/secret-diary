@@ -48,6 +48,16 @@ describe('getEntries tests', () => {
         // Assert
         expect(result).toMatch(`Error: Diary is Locked`);
     });
+
+    it('should show that there are no entries when a new unlocked diary is created', () => {
+        // Arrange
+        const testLock = { isLocked: () => false };
+        const testDiary = new secretDiary(testLock);
+        // Act
+        const result = testDiary.getEntries();
+        // Assert
+        expect(result).toBe(0);
+    });
     
 });
 
@@ -62,6 +72,17 @@ describe('addEntry tests', () => {
         // Assert
         expect(result).toMatch(`Error: Diary is Locked`);
     });
+
+    // it('should increase the length of diaryEntries by 1 when diary is unlocked', () => {
+    //     // Arrange
+    //     const testLock = { isLocked: () => false };
+    //     const testDiary = new secretDiary(testLock);
+    //     // Act
+    //     testDiary.addEntry('hello');
+    //     const result = testDiary.diaryEntries.length;
+    //     // Assert
+    //     expect(result).toBe(1);
+    // });
     
 });
 
