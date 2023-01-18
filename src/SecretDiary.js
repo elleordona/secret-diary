@@ -7,7 +7,7 @@ export default class secretDiary {
         this.#typeOfLock = typeOfLock;
     };
 
-    isLocked = () => { this.#typeOfLock.isLocked() }; 
+    isLocked = () => { return this.#typeOfLock.isLocked() }; 
     
 
     // // functions
