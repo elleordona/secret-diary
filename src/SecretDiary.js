@@ -34,6 +34,10 @@ export default class secretDiary {
         return this.#typeOfLock.unlock();
     }
 
+    lock = () => {
+        return this.#typeOfLock.lock();
+    }
+
     // // functions
     // addEntry(str) {
     //     return this.diaryEntries.add(str);

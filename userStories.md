@@ -61,6 +61,20 @@ So that i can journal my life.
 
 **Test 10** - when `addEntry` is called with an `entry`, while the `secretDiary` is `Unlocked`, the length of `diaryEntries` should increase by 1 [done]
 
-**Test 11** - make sure that the `entry` has been added to `diaryEntries` after `addEntry` has been called
+**Test 11** - make sure that the `entry` has been added to `diaryEntries` after `addEntry` has been called [done]
 
 ---
+
+## User Story 6
+
+```sh
+As a user,
+I want to be able to lock the diary,
+So that other people can't use it
+```
+
+**Test 12** - `lock` changes the state of `locked` to true in the instance of `lock` [done]
+
+**Test 13** - `lock` changes the state of `locked` to true in the instance of `secretDiary` [done]
+
+

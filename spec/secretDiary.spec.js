@@ -96,8 +96,22 @@ describe('unlocking the diary tests', () => {
         testDiary.unlock();
         // Assert
         expect(lockSpy).toHaveBeenCalled();
-    })
-})
+    });
+});
+
+describe('locking the diary tests', () => {
+    it('should call lock on the lock when the diary calls lock', () => {
+        // Arrange
+        const testLock = { lock: () => { } };
+        const lockSpy = spyOn(testLock, 'lock');
+        const testDiary = new secretDiary(testLock);
+        // Act
+        testDiary.lock();
+        // Assert
+        expect(lockSpy).toHaveBeenCalled();
+    });
+});
+
 
 
 //! ignore these test for now
