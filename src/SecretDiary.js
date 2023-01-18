@@ -20,9 +20,13 @@ export default class secretDiary {
         };
     };
     
-    addEntry = () => {
+    addEntry = message => {
         if (this.isLocked() === true) {
             return `Error: Diary is Locked`;
+        } else if (this.isLocked() === false) {
+            this.message = message;
+            this.#diaryEntries.push(this.message);
+            return console.log(`${this.message} has been added to diaryEntries`);
         };
     };
 

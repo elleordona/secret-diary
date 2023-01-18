@@ -59,8 +59,8 @@ I want to be able to add entries to the diary when unlocked,
 So that i can journal my life.
 ```
 
-**Test 10** - when `addEntry` is called with an `entry`, while the `secretDiary` is `Unlocked`, the length of `entries` should increase by 1
+**Test 10** - when `addEntry` is called with an `entry`, while the `secretDiary` is `Unlocked`, the length of `diaryEntries` should increase by 1 [done]
 
-**Test 11** - make sure that the `entry` has been added to `entries` after `addEntry` has been called
+**Test 11** - make sure that the `entry` has been added to `diaryEntries` after `addEntry` has been called
 
 ---
