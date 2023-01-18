@@ -1,21 +1,22 @@
-class secretDiary {
+export default class secretDiary {
 
-    // // properties
-    // #Entries;
+    // properties
+    #typeOfLock;
 
-    constructor(diaryEntries) {
-        this.diaryEntries = diaryEntries;
-    }
+    constructor(typeOfLock) {
+        this.#typeOfLock = typeOfLock;
+    };
 
-    // functions
-    addEntry(str) {
-        return this.diaryEntries.add(str);
-    }
+    isLocked = () => { this.#typeOfLock.isLocked() }; 
+    
 
-    getEntries() {
-        return this.diaryEntries.allEntries();
-    }
+    // // functions
+    // addEntry(str) {
+    //     return this.diaryEntries.add(str);
+    // }
 
-}
+    // getEntries() {
+    //     return this.diaryEntries.allEntries();
+    // }
 
-export default secretDiary;
+};

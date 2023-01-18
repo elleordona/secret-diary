@@ -1,12 +1,13 @@
-class lock {
+export default class lock {
 
-    add() {
-        return `Cannot add entries when locked`;
-    }
+    #locked = true; // default status 
 
-    allEntries() {
-        return `This diary is locked`;
-    }
-}
+    isLocked = () => {
+        return this.#locked // shows user the state of the lock
+    };
 
-export default lock;
+    toggleLock = () => {
+        this.#locked = !this.#locked; // changes the lock to the opposite state
+    };
+
+};
