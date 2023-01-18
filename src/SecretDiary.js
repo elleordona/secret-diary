@@ -23,6 +23,10 @@ export default class secretDiary {
         };
     };
 
+    unlock = () => {
+        return this.#typeOfLock.unlock();
+    }
+
     // // functions
     // addEntry(str) {
     //     return this.diaryEntries.add(str);

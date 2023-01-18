@@ -65,7 +65,18 @@ describe('addEntry tests', () => {
     
 });
 
-
+describe('unlocking the diary tests', () => {
+    it('should call unlock on the lock when the diary calls unlock', () => {
+        // Arrange
+        const testLock = { unlock: () => { } };
+        const lockSpy = spyOn(testLock, 'unlock');
+        const testDiary = new secretDiary(testLock);
+        // Act
+        testDiary.unlock();
+        // Assert
+        expect(lockSpy).toHaveBeenCalled();
+    })
+})
 
 
 //! ignore these test for now

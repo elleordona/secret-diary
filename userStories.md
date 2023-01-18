@@ -11,6 +11,7 @@ So that I have to unlock it to use it.
 
 **Test 3** - test that the diary uses `isLocked` from `Lock`/`typeOfLock` [done]
 
+---
 ## User Story 2
 
 ```sh
@@ -21,4 +22,19 @@ So that access to it is restricted when locked.
 
 **Test 4** - `getEntries` returns error when diary is locked [done]
 
-**Test 5** - `addEntry` returns error when diary is locked
+**Test 5** - `addEntry` returns error when diary is locked [done]
+
+---
+## User Story 3
+
+```sh
+As a user,
+I want to unlock the diary,
+So that i can use it.
+```
+
+**Test 6** - `unlock` changes the state of `locked` to false in the instance of `lock` [done]
+
+**Test 7** - `unlock` changes the state of `locked` to false in the instance of `secretDiary` [done]
+
+---

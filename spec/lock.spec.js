@@ -12,3 +12,15 @@ describe('when creating a lock', () => {
         expect(result).toBeTrue();
     });
 });
+
+describe('unlocking the lock tests', () => {
+    it('should unlock the lock when unlock is called', () => {
+        // Arrange
+        const testLock = new lock();
+        // Act
+        testLock.unlock();
+        const result = testLock.isLocked();
+        // Assert
+        expect(result).toBeFalse();
+    });
+});
